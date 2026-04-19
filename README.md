@@ -48,7 +48,7 @@ The goal of this project goes beyond writing SQL queries; it focuses on extracti
 ### 🎼 Phase 3: Product Intelligence & Catalog Strategy
 **Objective:** Audit catalog health, evaluate product-market fit by content type, and identify actionable areas for inventory optimization.
 * **Dead Stock Identification:** Used `COALESCE` to handle zero-revenue items and built a dynamic flagging system to identify "Dead Stock" (genres with >50 tracks but <20% sell-through rate).
-* **Duration Strategy:** Implemented `CASE WHEN` statements to segment tracks by duration, discovering that consumers heavily favor tracks in the '2-4 minute' range.
+* **Duration Strategy:** Implemented `CASE WHEN` statements to segment tracks by duration, discovering that consumers heavily favor tracks in the '4-6 minute' (long) range.
 * **Upselling Potential:** Algorithmically classified album performance into 'High/Medium/Low' tiers based on mathematically derived completion rates, highlighting opportunities for "Complete My Album" discounts.
 
 ---
