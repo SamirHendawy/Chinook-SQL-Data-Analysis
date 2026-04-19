@@ -46,10 +46,12 @@ The goal of this project goes beyond writing SQL queries; it focuses on extracti
 * **Geo-Musical Profiling:** Deployed a complex CTE combining `ROW_NUMBER()` and `GROUP_CONCAT()` to automatically generate a readable, string-aggregated list of the Top 3 spending countries for every music genre.
 
 ### 🎼 Phase 3: Product Intelligence & Catalog Strategy
-**Objective:** Audit catalog health, evaluate product-market fit by content type, and identify actionable areas for inventory optimization.
-* **Dead Stock Identification:** Used `COALESCE` to handle zero-revenue items and built a dynamic flagging system to identify "Dead Stock" (genres with >50 tracks but <20% sell-through rate).
-* **Duration Strategy:** Implemented `CASE WHEN` statements to segment tracks by duration, discovering that consumers heavily favor tracks in the '4-6 minute' (long) range.
-* **Upselling Potential:** Algorithmically classified album performance into 'High/Medium/Low' tiers based on mathematically derived completion rates, highlighting opportunities for "Complete My Album" discounts.
+* 📦 **Dead Stock Identification:** Certain genres have massive inventory (50+ tracks) but a sell-through rate of under 20%. 
+  * **Recommendation:** Halt procurement budgets for these underperforming genres immediately. Liquidate current inactive tracks via discounted bundles.
+* ⏱️ **Duration Strategy (The Sweet Spot):** Data segmentation proves that consumers heavily favor tracks in the '4-6 minute' (Long) range. 
+  * **Recommendation:** Prominently feature 4-6 minute tracks on the storefront homepage and prioritize this duration in future catalog acquisitions.
+* 💿 **Upselling Potential (Album Completion Gap):** Algorithmic classification of album performance highlights that many users buy single tracks rather than full albums. 
+  * **Recommendation:** Implement a dynamic "Complete My Album" feature. If a user buys tracks from an album, offer them the remaining tracks at a dynamic discount.
 
 ---
 
