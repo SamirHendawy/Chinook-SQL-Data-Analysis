@@ -46,12 +46,10 @@ The goal of this project goes beyond writing SQL queries; it focuses on extracti
 * **Geo-Musical Profiling:** Deployed a complex CTE combining `ROW_NUMBER()` and `GROUP_CONCAT()` to automatically generate a readable, string-aggregated list of the Top 3 spending countries for every music genre.
 
 ### 🎼 Phase 3: Product Intelligence & Catalog Strategy
-* 📦 **Dead Stock Identification:** Certain genres have massive inventory (50+ tracks) but a sell-through rate of under 20%. 
-  * **Recommendation:** Halt procurement budgets for these underperforming genres immediately. Liquidate current inactive tracks via discounted bundles.
-* ⏱️ **Duration Strategy (The Sweet Spot):** Data segmentation proves that consumers heavily favor tracks in the '4-6 minute' (Long) range. 
-  * **Recommendation:** Prominently feature 4-6 minute tracks on the storefront homepage and prioritize this duration in future catalog acquisitions.
-* 💿 **Upselling Potential (Album Completion Gap):** Algorithmic classification of album performance highlights that many users buy single tracks rather than full albums. 
-  * **Recommendation:** Implement a dynamic "Complete My Album" feature. If a user buys tracks from an album, offer them the remaining tracks at a dynamic discount.
+**Objective:** Audit catalog health, evaluate product-market fit by content type, and identify actionable areas for inventory optimization.
+* **Dead Stock Identification:** Used `COALESCE` to handle zero-revenue items and built a dynamic flagging system to identify "Dead Stock" (genres with >50 tracks but <20% sell-through rate).
+* **Duration Strategy:** Implemented `CASE WHEN` statements to segment tracks by duration, discovering that consumers heavily favor tracks in the '4-6 minute' (long) range.
+* **Upselling Potential:** Algorithmically classified album performance into 'High/Medium/Low' tiers based on mathematically derived completion rates, highlighting opportunities for "Complete My Album" discounts.
 
 ---
 
@@ -75,15 +73,13 @@ Based on the end-to-end analysis of the Chinook database, we extracted the follo
 * 🎯 **Geo-Musical Mapping:** We algorithmically mapped the "Top 3 Spending Countries" for every single genre. 
   * **Recommendation:** Use this as a blueprint for hyper-targeted ad spend (e.g., automatically routing Latin Music promotions directly to the most profitable regions).
 
-### 🎼 Phase 3: Product Intelligence & Catalog Health
-* 📦 **The "Dead Stock" Dilemma:** Certain genres have massive inventory (50+ tracks) but a sell-through rate of under 20%. 
-  * **Recommendation:** Halt procurement budgets for these underperforming genres immediately. Liquidate current inactive tracks via clearance sales or discounted bundles.
-* ⏱️ **The "Golden Duration":** Data bucketing proved that consumer behavior strongly favors Medium-length tracks (2-4 minutes). 
-  * **Recommendation:** Prominently feature 2-4 minute tracks on the storefront homepage and limit the acquisition of overly long tracks (>6 mins).
-* 💿 **Album Completion Gap:** Users overwhelmingly buy "Single Tracks" rather than full albums, leaving revenue on the table. 
-  * **Recommendation:** Implement a dynamic "Complete My Album" feature. If a user buys 2 tracks from an album, automatically offer them the rest at a 40% discount.
-* 🎸 **Storefront Personalization:** Music taste is heavily regional, and a few "Superstar" artists drive the majority of the revenue. 
-  * **Recommendation:** Customize the landing page UI dynamically based on the user's country, and push "Artist Spotlight" bundles for the top 10 global artists.
+### 🎼 Phase 3: Product Intelligence & Catalog Strategy
+* 📦 **Dead Stock Identification:** Certain genres have massive inventory (50+ tracks) but a sell-through rate of under 20%. 
+  * **Recommendation:** Halt procurement budgets for these underperforming genres immediately. Liquidate current inactive tracks via discounted bundles.
+* ⏱️ **Duration Strategy (The Sweet Spot):** Data segmentation proves that consumers heavily favor tracks in the '4-6 minute' (Long) range. 
+  * **Recommendation:** Prominently feature 4-6 minute tracks on the storefront homepage and prioritize this duration in future catalog acquisitions.
+* 💿 **Upselling Potential (Album Completion Gap):** Algorithmic classification of album performance highlights that many users buy single tracks rather than full albums. 
+  * **Recommendation:** Implement a dynamic "Complete My Album" feature. If a user buys tracks from an album, offer them the remaining tracks at a dynamic discount.
 
 ---
 
