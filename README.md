@@ -53,6 +53,38 @@ The goal of this project goes beyond writing SQL queries; it focuses on extracti
 
 ---
 
+## 💡 Strategic Business Insights & Recommendations
+
+Based on the end-to-end analysis of the Chinook database, we extracted the following actionable recommendations to optimize revenue, marketing, and catalog health:
+
+### 💰 Phase 1: Sales & Revenue Strategy
+* 🛒 **Basket Size vs. Premium:** High-value invoices are driven by bulk purchases (larger basket sizes), not premium-priced items. 
+  * **Recommendation:** Push "Bundle Offers" (e.g., Buy 10 tracks, get 1 free) to naturally increase Average Order Value (AOV).
+* 📉 **Financial Trajectory:** Automated YoY tracking revealed consistent mid-term growth, but flagged a decline in the final recorded year. 
+  * **Recommendation:** Deploy "Win-Back" email campaigns offering targeted discounts to churned users before the fiscal year ends.
+* 🏙️ **Urban Market Efficiency:** Cities like Prague matched others (e.g., São Paulo) in transaction volume but generated significantly higher revenue per order. 
+  * **Recommendation:** Localize premium ad budgets to high-AOV (Average Order Value) cities rather than treating all urban markets equally.
+
+### 🌍 Phase 2: Customer Demographics & Targeting
+* 💎 **The "Upper-Middle" Cohort:** Beyond the top 5 VIPs, we isolated a secondary cohort of 20 customers who spend just above the global average. 
+  * **Recommendation:** Launch aggressive cross-sell campaigns specifically for this cohort to graduate them into the VIP tier.
+* 🚀 **International ARPU:** While the USA has the most users, calculating Average Revenue Per User (ARPU) revealed smaller international markets with much higher spending power per capita. 
+  * **Recommendation:** Reallocate customer acquisition budgets towards these high-ARPU international countries to maximize ROI.
+* 🎯 **Geo-Musical Mapping:** We algorithmically mapped the "Top 3 Spending Countries" for every single genre. 
+  * **Recommendation:** Use this as a blueprint for hyper-targeted ad spend (e.g., automatically routing Latin Music promotions directly to the most profitable regions).
+
+### 🎼 Phase 3: Product Intelligence & Catalog Health
+* 📦 **The "Dead Stock" Dilemma:** Certain genres have massive inventory (50+ tracks) but a sell-through rate of under 20%. 
+  * **Recommendation:** Halt procurement budgets for these underperforming genres immediately. Liquidate current inactive tracks via clearance sales or discounted bundles.
+* ⏱️ **The "Golden Duration":** Data bucketing proved that consumer behavior strongly favors Medium-length tracks (2-4 minutes). 
+  * **Recommendation:** Prominently feature 2-4 minute tracks on the storefront homepage and limit the acquisition of overly long tracks (>6 mins).
+* 💿 **Album Completion Gap:** Users overwhelmingly buy "Single Tracks" rather than full albums, leaving revenue on the table. 
+  * **Recommendation:** Implement a dynamic "Complete My Album" feature. If a user buys 2 tracks from an album, automatically offer them the rest at a 40% discount.
+* 🎸 **Storefront Personalization:** Music taste is heavily regional, and a few "Superstar" artists drive the majority of the revenue. 
+  * **Recommendation:** Customize the landing page UI dynamically based on the user's country, and push "Artist Spotlight" bundles for the top 10 global artists.
+
+---
+
 ## 💻 Tech Stack & Key SQL Concepts
 * **RDBMS:** MySQL
 * **Advanced Techniques:** Window Functions (`OVER`, `PARTITION BY`, `LAG`, `ROW_NUMBER`), Common Table Expressions (CTEs), Recursive CTEs, Data Bucketing (`NTILE`, `CASE WHEN`), String Aggregation (`GROUP_CONCAT`), Dynamic Views.
